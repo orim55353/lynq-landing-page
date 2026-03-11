@@ -152,6 +152,15 @@
   display: flex;
   justify-content: center;
   pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.splash-hero--hover-left .splash-hero__half--left .splash-hero__mockup-thumb {
+  transform: scale(1.08);
+}
+
+.splash-hero--hover-right .splash-hero__half--right .splash-hero__mockup-thumb {
+  transform: scale(1.08);
 }
 
 /* ─── CTA Buttons ─── */
