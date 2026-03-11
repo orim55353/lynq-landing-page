@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Lynq - Where hiring meets talent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0a0a0f;
+      font-family: 'DM Sans', sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+
+    .gradient-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 630px;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .gradient-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 600px;
+      height: 630px;
+      background: linear-gradient(225deg, rgba(251, 146, 60, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .divider {
+      position: absolute;
+      top: 100px;
+      left: 600px;
+      width: 1px;
+      height: 430px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .logo-area {
+      position: absolute;
+      top: 36px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .logo-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .logo-wordmark {
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 38px;
+      letter-spacing: -0.5px;
+      color: #fff;
+      display: inline-block;
+      position: relative;
+    }
+
+    .half-label-left {
+      position: absolute;
+      top: 108px;
+      left: 0;
+      width: 600px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .half-label-right {
+      position: absolute;
+      top: 108px;
+      right: 0;
+      width: 600px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .bottom-text {
+      position: absolute;
+      bottom: 56px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .tagline {
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 600;
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .url {
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Dashboard mockup */
+    .dashboard-mockup {
+      position: absolute;
+      top: 168px;
+      left: 160px;
+      width: 280px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 16px;
+      transform: rotate(2deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .dashboard-header {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .stat-box {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0891b2;
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.45);
+      margin-top: 2px;
+    }
+
+    .mini-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 32px;
+      margin-top: 14px;
+      padding: 0 4px;
+    }
+
+    .chart-bar {
+      flex: 1;
+      background: rgba(8, 145, 178, 0.3);
+      border-radius: 3px 3px 0 0;
+      min-height: 4px;
+    }
+
+    .chart-bar.active {
+      background: #0891b2;
+    }
+
+    /* Phone mockup */
+    .phone-mockup {
+      position: absolute;
+      top: 158px;
+      right: 228px;
+      width: 140px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px 12px 16px;
+      transform: rotate(-2deg);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .phone-notch {
+      width: 40px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+      margin: 0 auto 14px;
+    }
+
+    .job-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 12px 10px;
+    }
+
+    .job-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .company-logo {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fb923c, #f97316);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .company-name {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 500;
+    }
+
+    .job-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .job-salary {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 10px;
+    }
+
+    .match-badge {
+      display: inline-block;
+      background: rgba(251, 146, 60, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.3);
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #fb923c;
+    }
+
+    .swipe-dots {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 12px;
+    }
+
+    .swipe-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .swipe-dot.active {
+      background: #fb923c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-left"></div>
+    <div class="gradient-right"></div>
+    <div class="divider"></div>
+
+    <div class="logo-area">
+      <span class="logo-lockup">
+        <svg class="logo-icon" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z" fill="#06B6D4"/>
+          <path d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z" fill="#06B6D4"/>
+          <path d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z" fill="url(#og-grad)"/>
+          <defs><linearGradient id="og-grad" x1="635.495" y1="397.409" x2="635.495" y2="977.098" gradientUnits="userSpaceOnUse"><stop stop-color="#FB923C"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
+        </svg>
+        <span class="logo-wordmark">Lynq</span>
+      </span>
+    </div>
+
+    <div class="half-label-left">Hire with clarity</div>
+    <div class="half-label-right">Find a job that fits</div>
+
+    <!-- Employer dashboard mockup -->
+    <div class="dashboard-mockup">
+      <div class="dashboard-header">Dashboard</div>
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-value">12</div>
+          <div class="stat-label">Active Jobs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">284</div>
+          <div class="stat-label">Candidates</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">18</div>
+          <div class="stat-label">Interviews</div>
+        </div>
+      </div>
+      <div class="mini-chart">
+        <div class="chart-bar" style="height: 40%"></div>
+        <div class="chart-bar" style="height: 65%"></div>
+        <div class="chart-bar" style="height: 50%"></div>
+        <div class="chart-bar active" style="height: 85%"></div>
+        <div class="chart-bar" style="height: 70%"></div>
+        <div class="chart-bar" style="height: 55%"></div>
+        <div class="chart-bar active" style="height: 100%"></div>
+        <div class="chart-bar" style="height: 45%"></div>
+        <div class="chart-bar" style="height: 75%"></div>
+        <div class="chart-bar" style="height: 60%"></div>
+      </div>
+    </div>
+
+    <!-- Job seeker phone mockup -->
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <div class="job-card">
+        <div class="job-card-header">
+          <div class="company-logo">T</div>
+          <div class="company-name">TechFlow</div>
+        </div>
+        <div class="job-title">Frontend Engineer</div>
+        <div class="job-salary">$120K - $160K</div>
+        <div class="match-badge">92% match</div>
+      </div>
+      <div class="swipe-dots">
+        <div class="swipe-dot"></div>
+        <div class="swipe-dot active"></div>
+        <div class="swipe-dot"></div>
+      </div>
+    </div>
+
+    <div class="bottom-text">
+      <div class="tagline">Where hiring meets talent</div>
+      <div class="url">lynq.jobs</div>
+    </div>
+  </div>
+</body>
+</html>

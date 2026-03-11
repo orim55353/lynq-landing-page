@@ -175,7 +175,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 16px 14px 14px;
+  padding: 20px 14px 14px;
   z-index: 1;
 }
 
@@ -236,11 +236,8 @@
   color: #ffffff;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 11;
+  align-self: center;
+  order: -1;
 }
 
 .job-card__match-dot {

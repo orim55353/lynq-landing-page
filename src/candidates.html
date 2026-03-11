@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lynq — Your next job, one swipe away</title>
+    <meta
+      name="description"
+      content="Jobs matched to what you actually want. Swipe through them, save the good ones, and apply in under 30 seconds. Free on iOS and Android."
+    />
+    <meta property="og:title" content="Lynq — Your next job, one swipe away" />
+    <meta
+      property="og:description"
+      content="Jobs matched to what you actually want. Swipe through them, save the good ones, and apply in under 30 seconds."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lynq.jobs/og-image-candidates.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Lynq — Your next job, one swipe away"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles/main-jobs.css" />
+  </head>
+  <body>
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <a href="/" class="navbar__logo">
+          <img
+            src="./icon.svg"
+            alt="Lynq"
+            class="navbar__logo-img"
+            width="32"
+            height="32"
+          />
+          <span class="navbar__logo-text">Lynq</span>
+        </a>
+
+        <ul class="navbar__links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li>
+            <a href="/hire" style="color: var(--accent)"
+              >For Employers &rarr;</a
+            >
+          </li>
+        </ul>
+
+        <div class="navbar__cta">
+          <a
+            href="#download"
+            class="btn btn--primary"
+            style="background: var(--orange)"
+            >Get the App</a
+          >
+        </div>
+
+        <a href="#download" class="btn btn--primary navbar__mobile-cta" style="background: var(--orange)">Get the App</a>
+
+        <button class="navbar__menu-btn" id="menu-btn" aria-label="Menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="js-hero">
+      <div class="container js-hero__inner">
+        <div class="js-hero__content">
+          <div class="js-hero__badge reveal">
+            <span class="js-hero__badge-dot"></span>
+            Free on iOS & Android
+          </div>
+
+          <h1 class="js-hero__title reveal reveal-delay-1">
+            Your next job shouldn't take<br />
+            <span class="js-hero__title-accent">40 hours to find</span>
+          </h1>
+
+          <p class="js-hero__subtitle reveal reveal-delay-2">
+            Lynq matches you to jobs you'll actually want. Swipe through them,
+            save the good ones, apply in seconds. That's it.
+          </p>
+
+          <div class="js-hero__actions reveal reveal-delay-3">
+            <div class="download-badges" id="download">
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">Download on the</span>
+                  <span class="download-badge__store">App Store</span>
+                </div>
+              </a>
+              <a href="#" class="download-badge">
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-1.89 1.095-2.413-2.413 2.001-2.001zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span class="download-badge__label">Get it on</span>
+                  <span class="download-badge__store">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-hero__mockup reveal reveal-delay-2">
+          <!-- Floating Annotations -->
+          <div class="js-hero__annotations">
+            <div class="floating-annotation floating-annotation--1">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--orange"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              92% match
+            </div>
+            <div class="floating-annotation floating-annotation--2">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--cyan"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              Applied
+            </div>
+            <div class="floating-annotation floating-annotation--3">
+              <div
+                class="floating-annotation__icon floating-annotation__icon--green"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              Saved
+            </div>
+          </div>
+
+          <!-- Phone Mockup -->
+          <div class="phone-mockup phone-mockup--lg">
+            <div class="phone-mockup__screen">
+              <div class="phone-mockup__notch"></div>
+              <div class="phone-mockup__status-bar">
+                <span class="phone-mockup__status-bar-time">9:41</span>
+                <span class="phone-mockup__status-bar-icons">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"
+                    />
+                  </svg>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <rect x="17" y="4" width="3" height="16" rx="1" />
+                    <rect x="12" y="8" width="3" height="12" rx="1" />
+                    <rect x="7" y="12" width="3" height="8" rx="1" />
+                    <rect x="2" y="16" width="3" height="4" rx="1" />
+                  </svg>
+                  <svg
+                    width="16"
+                    height="14"
+                    viewBox="0 0 28 14"
+                    fill="currentColor"
+                  >
+                    <rect
+                      x="0"
+                      y="1"
+                      width="22"
+                      height="12"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      fill="none"
+                    />
+                    <rect x="2" y="3" width="15" height="8" rx="1" />
+                    <rect x="23" y="4" width="3" height="6" rx="1" />
+                  </svg>
+                </span>
+              </div>
+              <div class="phone-mockup__stories-bar">
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+                <div class="phone-mockup__stories-segment"></div>
+              </div>
+              <div class="phone-mockup__cards">
+                <!-- Card 1 -->
+                <div
+                  class="job-card job-card--gradient-blue"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--blue"
+                      >
+                        T
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">TechFlow</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 92%
+                        Match</span
+                      >
+                    </div>
+                    <div class="job-card__title">Senior Frontend Engineer</div>
+                    <div class="job-card__salary">$120K – $160K</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">Remote</span>
+                      <span class="job-card__tag">Full-time</span>
+                      <span class="job-card__tag">Tel Aviv</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      Build beautiful, performant user interfaces for our
+                      next-gen analytics platform.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>Experience</span
+                        ><span class="job-card__detail-value"
+                          >3+ yrs</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Schedule</span
+                        ><span class="job-card__detail-value"
+                          >Full-Time</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Work Type</span
+                        ><span class="job-card__detail-value"
+                          >Remote</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">Health</span>
+                      <span class="job-card__benefit">Stock Options</span>
+                      <span class="job-card__benefit">Flexible Hours</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">Apply Now</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="job-card job-card--gradient-purple"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--purple"
+                      >
+                        D
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">DataVerse</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 88%
+                        Match</span
+                      >
+                    </div>
+                    <div class="job-card__title">Product Designer</div>
+                    <div class="job-card__salary">$100K – $140K</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">Hybrid</span>
+                      <span class="job-card__tag">Full-time</span>
+                      <span class="job-card__tag">NYC</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      Shape the future of data visualization with intuitive,
+                      user-centered designs.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>Experience</span
+                        ><span class="job-card__detail-value"
+                          >5+ yrs</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Schedule</span
+                        ><span class="job-card__detail-value"
+                          >Full-Time</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Work Type</span
+                        ><span class="job-card__detail-value"
+                          >Hybrid</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">Remote Fridays</span>
+                      <span class="job-card__benefit">Learning Budget</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">Apply Now</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="job-card job-card--gradient-green"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--green"
+                      >
+                        G
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">GreenScale</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 85%
+                        Match</span
+                      >
+                    </div>
+                    <div class="job-card__title">Data Analyst</div>
+                    <div class="job-card__salary">$80K – $110K</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">On-site</span>
+                      <span class="job-card__tag">Full-time</span>
+                      <span class="job-card__tag">London</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      Turn raw data into actionable insights that drive business
+                      growth and strategy.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>Experience</span
+                        ><span class="job-card__detail-value"
+                          >2+ yrs</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Schedule</span
+                        ><span class="job-card__detail-value"
+                          >Full-Time</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Work Type</span
+                        ><span class="job-card__detail-value"
+                          >On-site</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">Pension</span>
+                      <span class="job-card__benefit">Gym</span>
+                      <span class="job-card__benefit">25 Days PTO</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">Apply Now</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="job-card job-card--gradient-orange"
+                  style="
+                    background-image: url(&quot;https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80&quot;);
+                  "
+                >
+                  <div class="job-card__hero">
+                    <div class="job-card__header">
+                      <div
+                        class="job-card__company-logo job-card__company-logo--red"
+                      >
+                        N
+                      </div>
+                      <div class="job-card__company-info">
+                        <div class="job-card__company-name">NovaPay</div>
+                      </div>
+                      <span class="job-card__match-badge"
+                        ><span class="job-card__match-dot"></span> 82%
+                        Match</span
+                      >
+                    </div>
+                    <div class="job-card__title">Backend Engineer</div>
+                    <div class="job-card__salary">$130K – $170K</div>
+                    <div class="job-card__tags">
+                      <span class="job-card__tag">Remote</span>
+                      <span class="job-card__tag">Full-time</span>
+                      <span class="job-card__tag">SF Bay Area</span>
+                    </div>
+                  </div>
+                  <div class="job-card__body">
+                    <p class="job-card__desc">
+                      Build scalable payment infrastructure serving millions of
+                      daily transactions.
+                    </p>
+                    <div class="job-card__details">
+                      <span class="job-card__detail"
+                        ><span>Experience</span
+                        ><span class="job-card__detail-value"
+                          >4+ yrs</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Schedule</span
+                        ><span class="job-card__detail-value"
+                          >Full-Time</span
+                        ></span
+                      >
+                      <span class="job-card__detail"
+                        ><span>Work Type</span
+                        ><span class="job-card__detail-value"
+                          >Remote</span
+                        ></span
+                      >
+                    </div>
+                    <div class="job-card__benefits">
+                      <span class="job-card__benefit">Unlimited PTO</span>
+                      <span class="job-card__benefit">401k Match</span>
+                    </div>
+                    <div class="job-card__actions">
+                      <div class="job-card__bookmark">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="job-card__apply">Apply Now</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section js-how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal" style="color: var(--orange-hover)">
+            How It Works
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            From download to applied in under 3 minutes
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            No resumes. No cover letters. No 45-minute application forms.
+          </p>
+        </div>
+
+        <div class="js-steps">
+          <div class="js-step reveal">
+            <div class="js-step__number">1</div>
+            <h3 class="js-step__title">Tell us what you want</h3>
+            <p class="js-step__desc">
+              Pick your role, location, salary range, and how you like to work.
+              Takes about 90 seconds.
+            </p>
+          </div>
+
+          <div class="js-step reveal reveal-delay-1">
+            <div class="js-step__number">2</div>
+            <h3 class="js-step__title">Browse your matches</h3>
+            <p class="js-step__desc">
+              We show you jobs that match your profile. Swipe right on the ones
+              you like, left on the ones you don't. The more you swipe, the
+              better your feed gets.
+            </p>
+          </div>
+
+          <div class="js-step reveal reveal-delay-2">
+            <div class="js-step__number">3</div>
+            <h3 class="js-step__title">Tap to apply</h3>
+            <p class="js-step__desc">
+              See a role you like? One tap sends your profile to the company.
+              Done. Move on to the next one.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section js-features" id="features">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal" style="color: var(--orange-hover)">
+            Why Lynq
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            Job hunting, minus everything you hate about it
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            We took the worst parts of looking for a job and removed them.
+          </p>
+        </div>
+
+        <div class="js-features-grid">
+          <div class="js-feature-card reveal">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">Match Scores</h3>
+            <p class="js-feature-card__desc">
+              Every job shows how well it fits you. Stop guessing if you're
+              qualified, the score tells you.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-1">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="12" y1="8" x2="12" y2="16" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">Swipe to Explore</h3>
+            <p class="js-feature-card__desc">
+              Scroll through jobs the way you scroll through content. Right to
+              save, left to skip. Your feed learns what you like.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-2">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">One-Tap Apply</h3>
+            <p class="js-feature-card__desc">
+              Tap apply, and your profile goes straight to the hiring team. No
+              forms to fill. No cover letter to stress over.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">Save for Later</h3>
+            <p class="js-feature-card__desc">
+              Not ready to apply? Save it. Your bookmarks sync across all your
+              devices so nothing gets lost.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-1">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">Salary Up Front</h3>
+            <p class="js-feature-card__desc">
+              Every job shows the salary range before you apply. No more getting
+              to round 3 and finding out it pays half what you expected.
+            </p>
+          </div>
+
+          <div class="js-feature-card reveal reveal-delay-2">
+            <div class="js-feature-card__icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="js-feature-card__title">Real Jobs Only</h3>
+            <p class="js-feature-card__desc">
+              Every listing is from a verified company. No recruiter spam, no
+              duplicates, no ghost jobs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section
+      class="section"
+      style="background: #0f172a; position: relative; overflow: hidden"
+    >
+      <div class="container">
+        <div class="js-stats">
+          <div class="js-stat reveal">
+            <div class="js-stat__number" data-target="30" data-suffix=" sec">
+              0
+            </div>
+            <div class="js-stat__label">To apply</div>
+          </div>
+          <div class="js-stat reveal reveal-delay-1">
+            <div class="js-stat__number" data-target="85" data-suffix="%">
+              0
+            </div>
+            <div class="js-stat__label">Match accuracy</div>
+          </div>
+          <div class="js-stat reveal reveal-delay-2">
+            <div class="js-stat__number" data-target="10" data-suffix="K+">
+              0
+            </div>
+            <div class="js-stat__label">Jobs and counting</div>
+          </div>
+          <div class="js-stat reveal reveal-delay-3">
+            <div class="js-stat__number" data-target="0" data-suffix="">0</div>
+            <div class="js-stat__label">Resumes needed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__label reveal" style="color: var(--orange-hover)">
+            Real Talk
+          </p>
+          <h2 class="section__title reveal reveal-delay-1">
+            Don't take our word for it
+          </h2>
+          <p class="section__desc reveal reveal-delay-2">
+            People who found jobs on Lynq, in their own words.
+          </p>
+        </div>
+
+        <div class="js-testimonials-grid">
+          <div class="js-testimonial-card reveal">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "Applied to 12 jobs on my lunch break. Had two interviews by
+              Friday. This is how it should work."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">SR</div>
+              <div>
+                <div class="js-testimonial-card__name">Sarah R.</div>
+                <div class="js-testimonial-card__role">Frontend Developer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-testimonial-card reveal reveal-delay-1">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "The match scores are a game changer. I stopped applying to jobs I
+              had no shot at and landed something great in two weeks."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">MK</div>
+              <div>
+                <div class="js-testimonial-card__name">Michael K.</div>
+                <div class="js-testimonial-card__role">Product Manager</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="js-testimonial-card reveal reveal-delay-2">
+            <div class="js-testimonial-card__stars">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <p class="js-testimonial-card__text">
+              "One profile, one tap. I'm done filling out the same form on 20
+              different sites. Somebody finally figured this out."
+            </p>
+            <div class="js-testimonial-card__author">
+              <div class="js-testimonial-card__avatar">LD</div>
+              <div>
+                <div class="js-testimonial-card__name">Lisa D.</div>
+                <div class="js-testimonial-card__role">UX Designer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="js-cta-box reveal">
+          <div class="js-cta-box__watermark" aria-hidden="true">
+            <svg
+              viewBox="0 0 1200 1200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z"
+                fill="white"
+              />
+              <path
+                d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z"
+                fill="white"
+              />
+              <path
+                d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <h2 class="js-cta-box__title">Your next role is already on here</h2>
+          <p class="js-cta-box__desc">
+            Download Lynq, set up your profile in 90 seconds, and start seeing
+            jobs that match what you actually want.
+          </p>
+          <div class="js-cta-box__actions">
+            <div class="download-badges">
+              <a
+                href="#"
+                class="download-badge"
+                style="background: #ffffff; color: var(--orange-hover)"
+              >
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span
+                    class="download-badge__label"
+                    style="color: var(--text-muted)"
+                    >Download on the</span
+                  >
+                  <span class="download-badge__store">App Store</span>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="download-badge"
+                style="background: #ffffff; color: var(--orange-hover)"
+              >
+                <svg
+                  class="download-badge__icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 1.33-1.89 1.095-2.413-2.413 2.001-2.001zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z"
+                  />
+                </svg>
+                <div class="download-badge__text">
+                  <span
+                    class="download-badge__label"
+                    style="color: var(--text-muted)"
+                    >Get it on</span
+                  >
+                  <span class="download-badge__store">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__wordmark">
+            <span class="footer__wordmark-icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 1200 1200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z"
+                  fill="#06B6D4"
+                />
+                <path
+                  d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z"
+                  fill="#06B6D4"
+                />
+                <path
+                  d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z"
+                  fill="url(#footer-grad)"
+                />
+                <defs>
+                  <linearGradient
+                    id="footer-grad"
+                    x1="635.495"
+                    y1="397.409"
+                    x2="635.495"
+                    y2="977.098"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FB923C" />
+                    <stop offset="1" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="footer__wordmark-text">Lynq</span>
+          </div>
+          <span class="footer__copy">&copy; 2026</span>
+        </div>
+        <ul class="footer__links">
+          <li><a href="/hire">For Employers</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main-jobs.js"></script>
+  </body>
+</html>

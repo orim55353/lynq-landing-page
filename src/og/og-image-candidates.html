@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>Lynq Candidates - Your next job, one swipe away</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0a0a0f;
+      font-family: 'DM Sans', sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Orange gradient overlay */
+    .gradient-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1200px;
+      height: 630px;
+      background:
+        radial-gradient(ellipse 800px 400px at 50% 65%, rgba(251, 146, 60, 0.1), transparent),
+        radial-gradient(ellipse 500px 300px at 70% 25%, rgba(249, 115, 22, 0.07), transparent);
+      pointer-events: none;
+    }
+
+    .logo-area {
+      position: relative;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .logo-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .logo-wordmark {
+      font-family: 'Satoshi', sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      letter-spacing: -0.5px;
+      color: #fff;
+      display: inline-block;
+    }
+
+    .headline {
+      position: relative;
+      margin-top: 18px;
+      font-weight: 700;
+      font-size: 36px;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .subline {
+      position: relative;
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      max-width: 480px;
+    }
+
+    /* Phone mockup */
+    .phone {
+      position: relative;
+      margin-top: 20px;
+      width: 180px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 22px 14px 18px;
+      box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(251, 146, 60, 0.08),
+        0 0 80px rgba(251, 146, 60, 0.06);
+    }
+
+    .phone-notch {
+      width: 48px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+      margin: 0 auto 16px;
+    }
+
+    .job-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 12px;
+    }
+
+    .job-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .company-logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #fb923c, #f97316);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .company-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .company-name {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 500;
+    }
+
+    .company-location {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 1px;
+    }
+
+    .job-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .job-salary {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 10px;
+    }
+
+    .job-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .tag {
+      font-size: 9px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+
+    .match-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .match-badge {
+      display: inline-block;
+      background: rgba(251, 146, 60, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.3);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fb923c;
+    }
+
+    .match-bar-container {
+      flex: 1;
+      margin-left: 10px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .match-bar-fill {
+      width: 92%;
+      height: 100%;
+      background: linear-gradient(90deg, #fb923c, #f97316);
+      border-radius: 2px;
+    }
+
+    /* Swipe action buttons */
+    .swipe-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .swipe-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .swipe-btn.pass {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .swipe-btn.like {
+      background: rgba(251, 146, 60, 0.15);
+      border: 1px solid rgba(251, 146, 60, 0.3);
+      color: #fb923c;
+    }
+
+    .swipe-btn.super {
+      background: rgba(8, 145, 178, 0.15);
+      border: 1px solid rgba(8, 145, 178, 0.3);
+      color: #0891b2;
+    }
+
+    /* Platform badge */
+    .platform-badge {
+      position: relative;
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 6px 16px;
+    }
+
+    .platform-icon {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .platform-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-url {
+      position: absolute;
+      bottom: 28px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-weight: 400;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gradient-bg"></div>
+
+    <div class="logo-area">
+      <span class="logo-lockup">
+        <svg class="logo-icon" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 977.067V1.37076C161.691 -12.6483 220.253 84.3169 229.322 134.552V777.298H454.757L349.813 977.067H0Z" fill="#06B6D4"/>
+          <path d="M1200 456.99V1200H1126.15C1020.43 1183.18 983.631 1094.86 978.448 1052.8V947.657C791.881 1026.16 667.922 963.645 608.324 921.588L752.136 767.378C914.474 797.44 978.448 729.573 978.448 670.781V492.038C970.923 298.616 699.967 325.763 682.173 427.416L523.094 507.308L617.176 573.478C590.833 607.412 534.383 682.066 511.804 702.426C489.224 722.786 470.99 737.004 460.625 739.34C242.964 52.406 1126.15 -54.7061 1200 456.99Z" fill="#06B6D4"/>
+          <path d="M446.984 777.326L342.04 977.098C361.474 977.098 429.882 972.892 501.4 961.677C572.917 950.462 668.533 888.077 699.627 849.524L831.779 646.248L928.949 688.305L866.76 397.409L583.023 509.562L668.533 562.133C624.482 622.883 536.381 746.484 536.381 754.896C536.381 763.307 475.488 772.653 446.984 777.326Z" fill="url(#og-jobs-grad)"/>
+          <defs><linearGradient id="og-jobs-grad" x1="635.495" y1="397.409" x2="635.495" y2="977.098" gradientUnits="userSpaceOnUse"><stop stop-color="#FB923C"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
+        </svg>
+        <span class="logo-wordmark">Lynq</span>
+      </span>
+    </div>
+
+    <div class="headline">Your next job, one swipe away</div>
+    <div class="subline">Jobs matched to what you actually want</div>
+
+    <!-- Phone mockup -->
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="job-card">
+        <div class="job-card-header">
+          <div class="company-logo">T</div>
+          <div class="company-info">
+            <div class="company-name">TechFlow</div>
+            <div class="company-location">San Francisco, CA</div>
+          </div>
+        </div>
+        <div class="job-title">Frontend Engineer</div>
+        <div class="job-salary">$120K - $160K</div>
+        <div class="job-tags">
+          <span class="tag">React</span>
+          <span class="tag">Remote</span>
+          <span class="tag">Senior</span>
+        </div>
+        <div class="match-row">
+          <div class="match-badge">92%</div>
+          <div class="match-bar-container">
+            <div class="match-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+      <div class="swipe-actions">
+        <div class="swipe-btn pass">&times;</div>
+        <div class="swipe-btn super">&starf;</div>
+        <div class="swipe-btn like">&hearts;</div>
+      </div>
+    </div>
+
+    <div class="platform-badge">
+      <div class="platform-icon">&phone;</div>
+      <span class="platform-text">Free on iOS & Android</span>
+    </div>
+
+    <div class="footer-url">lynq.jobs</div>
+  </div>
+</body>
+</html>

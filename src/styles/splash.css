@@ -273,8 +273,18 @@
     margin-bottom: 24px;
   }
 
+  .navbar--splash {
+    padding: 12px 0;
+  }
+
   .navbar--splash .navbar__cta {
     position: static;
+    width: auto;
+    flex-direction: row;
+    padding: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 
   .navbar--splash .navbar__logo {
