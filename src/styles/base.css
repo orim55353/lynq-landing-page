@@ -65,11 +65,16 @@ img { max-width: 100%; display: block; }
 }
 
 .btn--ghost {
-  background: transparent;
-  color: var(--text-muted);
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.3);
 }
 
-.btn--ghost:hover { color: var(--text); }
+.btn--ghost:hover {
+  background: var(--accent-hover, #0e7490);
+  box-shadow: 0 4px 14px rgba(var(--accent-rgb), 0.4);
+  transform: translateY(-1px);
+}
 
 .btn--primary {
   background: var(--accent);
