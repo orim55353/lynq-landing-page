@@ -1,0 +1,1 @@
+import{i as o}from"./navbar-DIijLndN.js";o();const t=document.getElementById("contact-form"),s=document.getElementById("form-success");t.addEventListener("submit",e=>{e.preventDefault();const n=Object.fromEntries(new FormData(t));console.log("Contact form submission:",n),t.hidden=!0,s.hidden=!1});

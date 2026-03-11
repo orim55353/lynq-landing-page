@@ -1,0 +1,71 @@
+/* ─── Features Section Background ─── */
+.section#features {
+  position: relative;
+  overflow: hidden;
+}
+
+.section#features::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80') center/cover no-repeat;
+  opacity: 0.12;
+  z-index: -1;
+}
+
+/* ─── Features Grid ─── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  position: relative;
+  padding: 36px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card__icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.feature-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.feature-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Alternate orange accent on even cards */
+.feature-card:nth-child(even) .feature-card__icon {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.feature-card:nth-child(even):hover {
+  border-color: rgba(var(--orange-rgb), 0.3);
+}

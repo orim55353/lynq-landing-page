@@ -1,0 +1,69 @@
+/* ─── Navbar ─── */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 0;
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(250, 250, 249, 0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border-bottom-color: var(--border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__logo-img {
+  width: 32px; height: 32px;
+}
+
+.navbar__logo-text {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar__links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover { color: var(--text); }
+
+.navbar__cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__menu-btn {
+  display: none;
+  background: none;
+  color: var(--text);
+  padding: 8px;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lynq</title>
+  <meta name="description" content="Get in touch with the Lynq team. We'd love to hear from you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/contact-BxDqW2Cz.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/navbar-DIijLndN.js">
+  <link rel="stylesheet" crossorigin href="/assets/navbar-B64iZrIm.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar--solid" id="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo">
+        <div class="navbar__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+        </div>
+        Lyn<span>q<span class="accent-underline"></span></span>
+      </a>
+
+      <ul class="navbar__links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/#testimonials">Testimonials</a></li>
+      </ul>
+
+      <div class="navbar__cta">
+        <a href="https://app.lynq.jobs" class="btn btn--ghost">Log in</a>
+        <a href="/contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+      <button class="navbar__menu-btn" id="menu-btn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h1 class="contact-info__title">Get in touch</h1>
+          <p class="contact-info__desc">Interested in Lynq? Have a question? Fill out the form and we'll get back to you within one business day.</p>
+
+          <div class="contact-info__details">
+            <div class="contact-detail">
+              <div class="contact-detail__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-detail__label">Email</div>
+                <a href="mailto:hello@lynq.jobs" class="contact-detail__value">hello@lynq.jobs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="first-name">First name</label>
+                <input class="form-input" type="text" id="first-name" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="last-name">Last name</label>
+                <input class="form-input" type="text" id="last-name" name="lastName" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Work email</label>
+              <input class="form-input" type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company">Company</label>
+              <input class="form-input" type="text" id="company" name="company" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="company-size">Company size</label>
+              <select class="form-input form-select" id="company-size" name="companySize">
+                <option value="" disabled selected>Select</option>
+                <option value="1-10">1-10 employees</option>
+                <option value="11-50">11-50 employees</option>
+                <option value="51-200">51-200 employees</option>
+                <option value="201-500">201-500 employees</option>
+                <option value="500+">500+ employees</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">How can we help?</label>
+              <textarea class="form-input form-textarea" id="message" name="message" rows="4" placeholder="Tell us about your hiring needs..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg form-submit">
+              Send message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+          </form>
+
+          <div class="contact-form__success" id="form-success" hidden>
+            <div class="success-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="success-title">Message sent!</h3>
+            <p class="success-desc">Thanks for reaching out. We'll get back to you within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <div class="footer__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
+        </div>
+        <span class="footer__brand">Lynq</span>
+        <span class="footer__copy">&copy; 2026</span>
+      </div>
+      <ul class="footer__links">
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

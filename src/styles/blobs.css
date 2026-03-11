@@ -1,0 +1,31 @@
+/* ─── Gradient Blobs ─── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob--cyan {
+  background: var(--accent);
+}
+
+.blob--orange {
+  background: var(--orange);
+}
+
+/* Sections that contain blobs need overflow hidden */
+.hero,
+.section#features,
+.section#platform,
+.section#testimonials {
+  overflow: hidden;
+}
+
+/* Content sits above blobs */
+.hero .container,
+.section .container {
+  position: relative;
+  z-index: 1;
+}
