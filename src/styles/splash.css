@@ -10,20 +10,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 140px 48px 80px;
+  justify-content: flex-start;
+  padding: 180px 48px 80px;
   position: relative;
   transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 /* ─── Hover expand effect ─── */
-.splash-hero--hover-left .splash-hero__half--left { flex: 1.2; }
-.splash-hero--hover-left .splash-hero__half--right { flex: 0.8; }
-.splash-hero--hover-right .splash-hero__half--right { flex: 1.2; }
-.splash-hero--hover-right .splash-hero__half--left { flex: 0.8; }
+.splash-hero--hover-left .splash-hero__half--left { flex: 1.15; }
+.splash-hero--hover-left .splash-hero__half--right { flex: 0.85; }
+.splash-hero--hover-right .splash-hero__half--right { flex: 1.15; }
+.splash-hero--hover-right .splash-hero__half--left { flex: 0.85; }
 
 /* ─── Left (Employers - Cyan) ─── */
 .splash-hero__half--left {
@@ -71,11 +72,11 @@
 }
 
 .splash-hero--hover-left .splash-hero__divider {
-  left: 54.5%;
+  left: 56.3%;
 }
 
 .splash-hero--hover-right .splash-hero__divider {
-  left: 45.5%;
+  left: 43.7%;
 }
 
 .splash-hero__divider-logo {
@@ -242,24 +243,30 @@
     padding: 100px 24px 60px;
   }
 
+  .splash-hero__half--right {
+    order: -2;
+  }
+
   .splash-hero__divider {
+    position: relative;
     top: auto;
     bottom: auto;
-    left: 0;
-    right: 0;
+    left: auto;
+    right: auto;
     width: 100%;
     height: 1px;
     transform: none;
-    top: 50%;
+    order: -1;
   }
 
   .splash-hero__divider-logo {
     top: 50%;
+    left: 50%;
   }
 
   .splash-hero--hover-left .splash-hero__divider,
   .splash-hero--hover-right .splash-hero__divider {
-    left: 0;
+    left: auto;
   }
 
   .splash-hero__headline {

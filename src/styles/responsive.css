@@ -9,6 +9,12 @@
 
 @media (max-width: 768px) {
   .navbar__links { display: none; }
+  .navbar__inner { position: relative; }
+  .navbar__cta {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .navbar__menu-btn { display: block; }
 
   /* employer-preview responsive is in phone-mockup.css (shared) */
