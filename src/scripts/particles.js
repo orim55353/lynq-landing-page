@@ -4,25 +4,25 @@ export function initParticles() {
 
   const ctx = canvas.getContext('2d');
   let width = window.innerWidth;
-  let height = document.body.scrollHeight;
-  const dpr = window.devicePixelRatio || 1;
+  let height = window.innerHeight;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
   const COLORS = [
     { r: 8, g: 145, b: 178 },   // cyan
     { r: 251, g: 146, b: 60 },  // orange
   ];
 
-  const PARTICLE_COUNT = 100;
+  const PARTICLE_COUNT = 60;
   const particles = [];
 
   function resize() {
     width = window.innerWidth;
-    height = document.body.scrollHeight;
+    height = window.innerHeight;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
-    ctx.scale(dpr, dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
   function createParticle() {

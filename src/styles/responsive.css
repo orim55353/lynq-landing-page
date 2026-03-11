@@ -10,6 +10,8 @@
 @media (max-width: 768px) {
   .navbar__links { display: none; }
   .navbar__menu-btn { display: block; }
+
+  /* employer-preview responsive is in phone-mockup.css (shared) */
   .features-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 32px; }

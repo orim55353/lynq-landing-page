@@ -252,6 +252,8 @@
   flex: 1;
   opacity: 0;
   transition: opacity 0.5s ease;
+  will-change: opacity;
+  backface-visibility: hidden;
 }
 
 .mockup-view--active {

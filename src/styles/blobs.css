@@ -5,6 +5,8 @@
   filter: blur(90px);
   pointer-events: none;
   z-index: 0;
+  will-change: transform;
+  contain: strict;
 }
 
 .blob--cyan {

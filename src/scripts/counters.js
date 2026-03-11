@@ -30,5 +30,5 @@ export function initCounters() {
     { threshold: 0.5 }
   );
 
-  document.querySelectorAll('.stat__number').forEach((el) => observer.observe(el));
+  document.querySelectorAll('.stat__number, .js-stat__number').forEach((el) => observer.observe(el));
 }
