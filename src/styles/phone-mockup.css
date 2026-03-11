@@ -172,7 +172,6 @@
 
 /* ─── Job Card Hero (top area with company info) ─── */
 .job-card__hero {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -181,15 +180,15 @@
 }
 
 .job-card__hero > * {
-  position: relative;
   z-index: 1;
 }
 
 /* ─── Job Card Header (on hero image) ─── */
 .job-card__header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   margin-bottom: 10px;
 }
 
@@ -237,6 +236,11 @@
   color: #ffffff;
   backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
 }
 
 .job-card__match-dot {
@@ -471,6 +475,11 @@
   margin-bottom: 6px;
 }
 
+
+.phone-mockup--sm .phone-mockup__cards {
+  height: calc(100% - 40px);
+}
+
 /* ─── Large variant for hero ─── */
 .phone-mockup--lg {
   width: 340px;
@@ -543,6 +552,10 @@
 
   .phone-mockup--sm .phone-mockup__screen {
     border-radius: 18px;
+  }
+
+  .phone-mockup--sm .phone-mockup__cards {
+    height: calc(100% - 36px);
   }
 
   .employer-preview__inner {
