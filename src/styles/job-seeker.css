@@ -376,6 +376,15 @@
   color: #ffffff;
 }
 
+.js-cta-box .download-badge {
+  background: #ffffff;
+  color: var(--orange-hover);
+}
+
+.js-cta-box .download-badge__label {
+  color: var(--text-muted);
+}
+
 /* ─── Download Badges ─── */
 .download-badges {
   display: flex;

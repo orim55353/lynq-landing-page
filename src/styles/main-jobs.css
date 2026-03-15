@@ -1,5 +1,7 @@
 @import './base.css';
+@import './blobs.css';
 @import './navbar.css';
+@import './stats.css';
 @import './phone-mockup.css';
 @import './job-seeker.css';
 @import './footer.css';
