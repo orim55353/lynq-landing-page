@@ -34,6 +34,28 @@
   to { opacity: 0.06; }
 }
 
+/* ─── HI Badge ─── */
+.hi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(var(--cyan-rgb), 0.2);
+  background: rgba(var(--cyan-rgb), 0.06);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.hi-badge--on-dark {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .hero__badge {
   display: inline-flex;
   align-items: center;
