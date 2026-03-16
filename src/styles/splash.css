@@ -155,6 +155,227 @@
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ─── Scaled Mockup Wrappers (match inner page designs) ─── */
+.splash-mockup-wrap--browser {
+  width: 380px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.splash-mockup-wrap--browser .mockup-browser {
+  box-shadow: none;
+  border-radius: 12px;
+}
+
+/* Compact overrides for splash browser mockup */
+.splash-mockup-wrap--browser .mockup-sidebar {
+  width: 120px;
+  padding: 12px 0;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo {
+  padding: 0 10px 12px;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo-img {
+  width: 18px;
+  height: 18px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__logo-text {
+  font-size: 12px;
+}
+
+.splash-mockup-wrap--browser .mockup-sidebar__nav {
+  padding: 0 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-nav-item {
+  padding: 5px 8px;
+  font-size: 10px;
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-nav-item__icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__toolbar {
+  padding: 8px 10px;
+  gap: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__dot {
+  width: 7px;
+  height: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__dots {
+  gap: 4px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__url {
+  font-size: 10px;
+  padding: 3px 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-browser__content {
+  min-height: 250px;
+}
+
+.splash-mockup-wrap--browser .mockup-main {
+  padding: 12px;
+  gap: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-main__header {
+  font-size: 12px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi-row {
+  gap: 6px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__label {
+  font-size: 7px;
+  letter-spacing: 0.3px;
+  margin-bottom: 2px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__value {
+  font-size: 14px;
+}
+
+.splash-mockup-wrap--browser .mockup-kpi__change {
+  font-size: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-table {
+  border-radius: 8px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__header {
+  padding: 6px 10px;
+  font-size: 7px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__row {
+  padding: 6px 10px;
+  font-size: 9px;
+}
+
+.splash-mockup-wrap--browser .mockup-table__status {
+  font-size: 7px;
+  padding: 1px 6px;
+}
+
+.splash-mockup-wrap--phone {
+  position: relative;
+  width: 200px;
+  height: 413px;
+}
+
+.splash-mockup-wrap--phone .phone-mockup {
+  transform: scale(0.59);
+  transform-origin: top center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -170px;
+}
+
+/* ─── Floating Annotations (splash page) ─── */
+.splash-annotations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.floating-annotation {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  animation: splash-float 3s ease-in-out infinite;
+}
+
+.floating-annotation__icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-annotation__icon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.floating-annotation__icon--orange {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+.floating-annotation__icon--cyan {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.floating-annotation__icon--green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.floating-annotation--1 {
+  top: 8%;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.floating-annotation--2 {
+  top: 42%;
+  right: -40px;
+  animation-delay: 1s;
+}
+
+.floating-annotation--3 {
+  bottom: 18%;
+  left: -36px;
+  animation-delay: 2s;
+}
+
+@keyframes splash-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+
 .splash-hero--hover-left .splash-hero__half--left .splash-hero__mockup-thumb {
   transform: scale(1.08);
 }
@@ -272,6 +493,43 @@
   .splash-hero__mockup-thumb {
     margin-bottom: 24px;
   }
+
+  .splash-mockup-wrap--browser {
+    width: 300px;
+    height: 220px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-sidebar {
+    width: 90px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-nav-item {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+
+  .splash-mockup-wrap--browser .mockup-sidebar__logo-text {
+    font-size: 10px;
+  }
+
+  .splash-mockup-wrap--phone {
+    width: 180px;
+    height: 370px;
+  }
+
+  .splash-mockup-wrap--phone .phone-mockup {
+    transform: scale(0.53);
+    margin-left: -170px;
+  }
+
+  .floating-annotation {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .floating-annotation--1 { left: -20px; }
+  .floating-annotation--2 { right: -16px; }
+  .floating-annotation--3 { left: -14px; }
 
   .navbar--splash {
     padding: 12px 0;

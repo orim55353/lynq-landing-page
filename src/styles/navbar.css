@@ -55,6 +55,11 @@
 
 .navbar__links a:hover { color: var(--text); }
 
+.navbar__links a.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .navbar__cta {
   display: flex;
   align-items: center;

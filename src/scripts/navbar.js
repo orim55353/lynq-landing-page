@@ -57,6 +57,35 @@ export function initNavbar() {
     }
   });
 
+  // Scroll-spy: highlight active section link
+  const sectionLinks = Array.from(links.querySelectorAll('a[href^="#"]'));
+  const sections = sectionLinks
+    .map((a) => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      return el ? { link: a, section: el } : null;
+    })
+    .filter(Boolean);
+
+  if (sections.length > 0) {
+    const updateActive = () => {
+      const scrollY = window.scrollY + 120;
+      let current = null;
+
+      for (const { link, section } of sections) {
+        if (section.offsetTop <= scrollY) {
+          current = link;
+        }
+      }
+
+      sectionLinks.forEach((a) => a.classList.remove('active'));
+      if (current) current.classList.add('active');
+    };
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  }
+
   // Logo tap: first tap scrolls to top, second tap navigates home
   const logo = navbar.querySelector('.navbar__logo');
   if (logo && window.location.pathname !== '/') {
