@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1200">
-  <title>Lynq Candidates - Your next job, one swipe away</title>
+  <title>Lynq Candidates - Your next job, one scroll away</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -224,41 +224,41 @@
       border-radius: 2px;
     }
 
-    /* Swipe action buttons */
-    .swipe-actions {
+    .card-actions {
       display: flex;
-      justify-content: center;
-      gap: 16px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
       margin-top: 14px;
     }
 
-    .swipe-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
+    .apply-btn {
+      width: 100%;
+      background: #fb923c;
+      border-radius: 8px;
+      padding: 8px 0;
+      text-align: center;
+      font-size: 13px;
       font-weight: 700;
+      color: #fff;
     }
 
-    .swipe-btn.pass {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.4);
+    .scroll-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
     }
 
-    .swipe-btn.like {
-      background: rgba(251, 146, 60, 0.15);
-      border: 1px solid rgba(251, 146, 60, 0.3);
-      color: #fb923c;
+    .scroll-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
     }
 
-    .swipe-btn.super {
-      background: rgba(8, 145, 178, 0.15);
-      border: 1px solid rgba(8, 145, 178, 0.3);
-      color: #0891b2;
+    .scroll-dot.active {
+      background: rgba(255, 255, 255, 0.5);
     }
 
     /* Platform badge */
@@ -320,7 +320,7 @@
       </span>
     </div>
 
-    <div class="headline">Your next job, one swipe away</div>
+    <div class="headline">Your next job, one scroll away</div>
     <div class="subline">Jobs matched to what you actually want</div>
 
     <!-- Phone mockup -->
@@ -348,10 +348,13 @@
           </div>
         </div>
       </div>
-      <div class="swipe-actions">
-        <div class="swipe-btn pass">&times;</div>
-        <div class="swipe-btn super">&starf;</div>
-        <div class="swipe-btn like">&hearts;</div>
+      <div class="card-actions">
+        <div class="apply-btn">Apply Now</div>
+        <div class="scroll-indicator">
+          <div class="scroll-dot"></div>
+          <div class="scroll-dot active"></div>
+          <div class="scroll-dot"></div>
+        </div>
       </div>
     </div>
 
