@@ -86,7 +86,7 @@
 /* ─── Job Cards Stack ─── */
 .phone-mockup__cards {
   position: relative;
-  height: calc(100% - 80px);
+  height: calc(100% - 48px);
   padding: 4px 8px;
 }
 
